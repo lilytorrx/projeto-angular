@@ -3,6 +3,9 @@
     PrimaryButtonText="Entre agora"
     SecondaryButtonText="Crie uma conta gratuita">
 
-    <form action="">
+    <form [formGroup]="loginForm">
+        <app-primary-input>
+            <img src="/assets/svg/email-icon.svg" alt="Email">
+        </app-primary-input>
     </form>
 </app-default-login-layout-component>
