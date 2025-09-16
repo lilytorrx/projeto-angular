@@ -1,0 +1,42 @@
+<app-default-login-layout-component
+    title="Crie sua conta e comece hoje!"
+    PrimaryButtonText="Criar conta"
+    SecondaryButtonText="Entre agora"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!signupForm.valid"
+    >
+    <form ngNativeValidate [formGroup]="signupForm">
+        <app-primary-input
+            formControlName="name"  
+            inputName="name"
+            type="text"
+            label="Seu nome"
+            placeholder="João da Silva"
+        >
+            <img src="/assets/svg/email-icon.svg" alt="User">    
+        </app-primary-input>
+        <app-primary-input
+            formControlName="email"  
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="joaodasilva@gmail.com"
+        ><img src="/assets/svg/email-icon.svg" alt="Email"></app-primary-input>
+        <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Senha"
+            placeholder="ex: 123456"
+            ><img src="/assets/svg/password-icon.svg" alt="password"></app-primary-input>
+        <app-primary-input
+            formControlName="passwordConfirm"
+            inputName="passwordConfirm"
+            type="password"
+            label="Confirme sua Senha"
+            placeholder="ex: 123456"
+        ><img src="/assets/svg/password-icon.svg" alt="password">
+        </app-primary-input>
+   </form>
+</app-default-login-layout-component>
