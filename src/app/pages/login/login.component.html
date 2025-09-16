@@ -4,6 +4,7 @@
     SecondaryButtonText="Crie uma conta gratuita"
     (submit)="submit()"
     (navigate)="navigate()"
+    [disablePrimaryBtn]="!loginForm.valid"
     >
 
     <form [formGroup]="loginForm">
