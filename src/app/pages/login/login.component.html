@@ -1,16 +1,31 @@
 <app-default-login-layout-component
     title="Entre na sua conta"
     PrimaryButtonText="Entre agora"
-    SecondaryButtonText="Crie uma conta gratuita">
+    SecondaryButtonText="Crie uma conta gratuita"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    >
 
     <form [formGroup]="loginForm">
         <app-primary-input
-            formName="email"
+            formControlName="email"  
+            inputName="email"
             type="email"
             label="Email"
             placeholder="joaodasilva@gmail.com"
+            
         >
             <img src="/assets/svg/email-icon.svg" alt="Email">
         </app-primary-input>
+        <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Senha"
+            placeholder="ex: 123456"
+        >
+            <img src="/assets/svg/password-icon.svg" alt="password">
+        </app-primary-input>
+        <span>Esqueceu a senha?</span>
     </form>
 </app-default-login-layout-component>
