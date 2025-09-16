@@ -4,7 +4,12 @@
     SecondaryButtonText="Crie uma conta gratuita">
 
     <form [formGroup]="loginForm">
-        <app-primary-input>
+        <app-primary-input
+            formName="email"
+            type="email"
+            label="Email"
+            placeholder="joaodasilva@gmail.com"
+        >
             <img src="/assets/svg/email-icon.svg" alt="Email">
         </app-primary-input>
     </form>
